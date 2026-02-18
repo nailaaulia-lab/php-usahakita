@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page UMKM - Profesional & Modern</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+    --hijau-tua: #0f172a;
+    --hijau-muda: #1a2b3c;
+    --kuning: #f1c40f;
+    --kuning-muda: #f9e38c;
+    --putih: #ffffff;
+    --abu: #f8f9fa;
+    --abu-terang: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--abu);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+header {
+    background: var(--hijau-tua);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--putih);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.logo i {
+    color: var(--kuning);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--putih);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--kuning);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--kuning);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.contact-btn {
+    background: var(--kuning);
+    color: var(--hijau-tua);
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-btn:hover {
+    background: #e6b400;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-muda));
+    color: var(--putih);
+    padding: 100px 5% 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(241, 196, 15, 0.1);
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.hero h1 span {
+    color: var(--kuning);
+    position: relative;
+}
+
+.hero h1 span::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(241, 196, 15, 0.3);
+    border-radius: 4px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    max-width: 700px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--kuning);
+    color: var(--hijau-tua);
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.4);
+}
+
+.btn-primary:hover {
+    background: #e6b400;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(241, 196, 15, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--kuning);
+    border: 2px solid var(--kuning);
+}
+
+.btn-secondary:hover {
+    background: rgba(241, 196, 15, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn-order {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: var(--putih);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+}
+
+.btn-order:hover {
+    background: linear-gradient(135deg, #27ae60, #219653);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.5);
+}
+
+.hero-image {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    max-width: 600px;
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SERVICES SECTION */
+.services {
+    padding: 100px 5%;
+    background: var(--putih);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--hijau-tua);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--putih);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--abu-terang);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--kuning), #ff9800);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin: 20px 0 15px;
+    color: var(--hijau-tua);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.service-card .badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--kuning);
+    color: var(--hijau-tua);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.service-card .badge.hemat { background: #2ecc71; }
+.service-card .badge.starter { background: #f39c12; }
+.service-card .badge.laris { background: #e74c3c; }
+.service-card .badge.bisnis { background: #3498db; }
+.service-card .badge.premium { background: #9b59b6; }
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.service-card ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.service-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--kuning);
+    color: var(--hijau-tua);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 20px 0 25px;
+    color: var(--hijau-tua);
+    background: linear-gradient(135deg, var(--hijau-tua), #2c3e50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.price span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: block;
+    color: #777;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* ABOUT SECTION */
+.about {
+    background: var(--hijau-tua);
+    color: var(--putih);
+    padding: 100px 5%;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: var(--putih);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+/* TESTIMONI SECTION - BARU DITAMBAHKAN */
+.testimoni {
+    padding: 100px 5%;
+    background: var(--putih);
+}
+
+.testimoni-slider {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.testimoni-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimoni-slide {
+    min-width: 100%;
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-muda));
+    color: var(--putih);
+}
+
+.testimoni-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--kuning);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--hijau-tua);
+    font-weight: bold;
+}
+
+.testimoni-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.testimoni-author {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--kuning);
+}
+
+.testimoni-role {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.testimoni-stars {
+    color: var(--kuning);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.slider-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--hijau-tua);
+    color: var(--putih);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: var(--kuning);
+    color: var(--hijau-tua);
+    transform: scale(1.1);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--abu-terang);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: var(--kuning);
+    transform: scale(1.2);
+}
+
+/* CTA SECTION */
+.cta {
+    background: linear-gradient(135deg, var(--hijau-tua), var(--hijau-muda));
+    color: var(--putih);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer {
+    background: var(--hijau-tua);
+    color: var(--putih);
+    padding: 60px 5% 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h3 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--kuning);
+    border-radius: 3px;
+}
+
+.footer-column p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--putih);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--kuning);
+    color: var(--hijau-tua);
+    transform: translateY(-3px);
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.contact-info i {
+    color: var(--kuning);
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .hero-image {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 50px;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .testimoni-slide {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .card-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .testimoni-slide {
+        padding: 30px 20px;
+    }
+    
+    .testimoni-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .testimoni-slide {
+        padding: 25px 15px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <i class="fas fa-store"></i>
+            <span>Landing Page UMKM</span>
+        </a>
+        
+        <div class="nav-links">
+            <a href="#services">Paket</a>
+            <a href="#testimoni">Testimoni</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        
+        <a href="#contact" class="contact-btn">
+            <i class="fas fa-comment"></i> Hubungi Kami
+        </a>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>👋 Selamat Datang di Layanan <span>Landing Page UMKM</span></h1>
+        <p>Kami menyediakan berbagai paket landing page profesional untuk membantu UMKM tampil lebih terpercaya, menarik pelanggan, dan meningkatkan penjualan.</p>
+        
+        <div class="cta-buttons">
+            <a href="#services" class="btn btn-primary">
+                <i class="fas fa-box-open"></i> Lihat Paket
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-comments"></i> Konsultasi Gratis
+            </a>
+        </div>
+    </div>
+    
+    <div class="hero-image">
+        <img src="https://graphicsfamily.com/wp-content/uploads/edd/2022/02/Free-Modern-Landing-Page-Template.jpg" alt="Contoh Landing Page UMKM">
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="services">
+    <div class="section-title">
+        <h2>Paket Layanan Terbaik untuk UMKM</h2>
+        <p>Pilih paket yang sesuai dengan kebutuhan bisnis Anda. Semua paket dirancang khusus untuk membantu UMKM tampil profesional dan meningkatkan penjualan.</p>
+    </div>
+    
+    <div class="grid-3">
+        <div class="service-card hemat">
+            <div class="badge hemat">HEMAT</div>
+            <h3><i class="fas fa-coins"></i> Paket Hemat</h3>
+            <ul>
+                <li>1 halaman landing page sederhana</li>
+                <li>Nama usaha + deskripsi singkat</li>
+                <li>Tampilkan 1–3 produk unggulan</li>
+                <li>Tombol WhatsApp langsung chat</li>
+                <li>Foto/logo usaha</li>
+                <li>Akun media sosial</li>
+            </ul>
+            <div class="price">Rp100.000 – Rp200.000</div>
+            <div class="card-buttons">
+                <a href="landing page 1/landingpage1.html" class="btn btn-primary">Lihat Paket</a>
+                <a href="order-hemat.html" class="btn btn-order">Order Sekarang</a>
+            </div>
+        </div>
+        
+        <div class="service-card starter">
+            <div class="badge starter">STARTER</div>
+            <h3><i class="fas fa-rocket"></i> Paket Starter</h3>
+            <ul>
+                <li>Desain lebih menarik dari Paket Hemat</li>
+                <li>Profil usaha + cerita singkat brand</li>
+                <li>Katalog maksimal 5 produk</li>
+                <li>Tombol order via WhatsApp</li>
+                <li>Foto/logo usaha</li>
+                <li>Link media sosial</li>
+            </ul>
+            <div class="price">Rp250.000 – Rp400.000</div>
+            <div class="card-buttons">
+                <a href="landing page 2/landingpage2.html" class="btn btn-primary">Lihat Paket</a>
+                <a href="order-starter.html" class="btn btn-order">Order Sekarang</a>
+            </div>
+        </div>
+        
+        <div class="service-card laris">
+            <div class="badge laris">LARIS</div>
+            <h3><i class="fas fa-fire"></i> Paket Laris</h3>
+            <ul>
+                <li>Katalog maksimal 10 produk</li>
+                <li>Tombol otomatis whatsapp</li>
+                <li>Slide testimoni pembeli (chat/transfer)</li>
+                <li>Copywriting pemasaran (kata-kata jualan)</li>
+                <li>Desain lebih profesional</li>
+            </ul>
+            <div class="price">Rp450.000 – Rp700.000</div>
+            <div class="card-buttons">
+                <a href="landing page 3/landingpage3.html" class="btn btn-primary">Lihat Paket</a>
+                <a href="order-laris.html" class="btn btn-order">Order Sekarang</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="grid-2">
+        <div class="service-card bisnis">
+            <div class="badge bisnis">BISNIS</div>
+            <h3><i class="fas fa-building"></i> Paket Bisnis</h3>
+            <ul>
+                <li>Semua fitur Paket Laris</li>
+                <li>Tampilan lebih eksklusif & rapi</li>
+                <li>Galeri foto usaha / aktivitas</li>
+                <li>Navigasi menu lebih terstruktur</li>
+                <li>Copywriting cerita brand (agar usaha punya "nilai")</li>
+            </ul>
+            <div class="price">Rp700.000 – Rp1.000.000</div>
+            <div class="card-buttons">
+                <a href="landing page 4/landingpage4.html" class="btn btn-primary">Lihat Paket</a>
+                <a href="order-bisnis.html" class="btn btn-order">Order Sekarang</a>
+            </div>
+        </div>
+        
+        <div class="service-card premium">
+            <div class="badge premium">PREMIUM</div>
+            <h3><i class="fas fa-crown"></i> Paket Premium</h3>
+            <ul>
+                <li>Semua fitur paket sebelumnya</li>
+                <li>Bebas pilih warna & tata letak desain</li>
+                <li>Navigasi cepat & tampilan modern</li>
+                <li>Integrasi Google Maps lokasi usaha</li>
+                <li>Revisi sampai puas</li>
+                <li>Free konsultasi branding</li>
+            </ul>
+            <div class="price">Rp1.000.000 – Rp1.500.000</div>
+            <div class="card-buttons">
+                <a href="landing page 5/landingpage5.html" class="btn btn-primary">Lihat Paket</a>
+                <a href="order-premium.html" class="btn btn-order">Order Sekarang</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONI SECTION - BARU DITAMBAHKAN -->
+<section id="testimoni" class="testimoni">
+    <div class="section-title">
+        <h2>Apa Kata Pelanggan Kami?</h2>
+        <p>Berikut adalah testimoni dari UMKM yang telah menggunakan layanan landing page kami dan merasakan peningkatan penjualan.</p>
+    </div>
+    
+    <div class="testimoni-slider">
+        <div class="testimoni-track" id="testimoniTrack">
+            <!-- Slide 1 -->
+            <div class="testimoni-slide">
+                <div class="testimoni-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimoni-text">"Alhamdulillah, setelah pakai landing page dari sini, orderan via WhatsApp meningkat 3x lipat! Desainnya profesional dan prosesnya cepat."</p>
+                <div class="testimoni-avatar">SR</div>
+                <p class="testimoni-author">Siti Rahayu</p>
+                <p class="testimoni-role">Pemilik Usaha Keripik Pisang "Renyah"</p>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="testimoni-slide">
+                <div class="testimoni-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimoni-text">"Paket Starter yang saya pilih sangat worth it! Landing page-nya menarik, mudah diakses, dan pelanggan jadi lebih percaya dengan usaha saya."</p>
+                <div class="testimoni-avatar">AD</div>
+                <p class="testimoni-author">Ahmad Dhani</p>
+                <p class="testimoni-role">Pengrajin Batik Tulis "Lestari"</p>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="testimoni-slide">
+                <div class="testimoni-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimoni-text">"Timnya sangat responsif dan membantu. Revisi cepat, hasil memuaskan. Sekarang usaha kuliner saya lebih mudah ditemukan pelanggan online!"</p>
+                <div class="testimoni-avatar">DW</div>
+                <p class="testimoni-author">Dewi Wulandari</p>
+                <p class="testimoni-role">Pemilik Catering "Nusantara"</p>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="testimoni-slide">
+                <div class="testimoni-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimoni-text">"Investasi terbaik untuk usaha saya! Landing page Premium-nya lengkap, ada Google Maps, dan desainnya sangat modern. Highly recommended!"</p>
+                <div class="testimoni-avatar">BH</div>
+                <p class="testimoni-author">Budi Hermawan</p>
+                <p class="testimoni-role">Toko Elektronik "Maju Jaya"</p>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn" aria-label="Testimoni sebelumnya">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn" id="nextBtn" aria-label="Testimoni berikutnya">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+    <div class="about-content">
+        <div class="about-image">
+            <img src="https://graphicsfamily.com/wp-content/uploads/edd/2022/02/Free-Modern-Landing-Page-Template.jpg" alt="Desain Landing Page">
+        </div>
+        
+        <div class="about-text">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah tim profesional yang berfokus pada pembuatan landing page khusus untuk UMKM di Indonesia. Dengan pengalaman dalam pengembangan web yang berkualitas, kami telah membantu banyak UMKM tampil lebih profesional dan meningkatkan penjualan mereka.</p>
+            <p>Setiap landing page yang kami buat dirancang dengan mempertimbangkan target pasar, produk unggulan, dan kebutuhan bisnis Anda. Kami tidak hanya membuat tampilan yang menarik, tetapi juga fokus pada konversi yang meningkatkan penjualan Anda.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+    <h2>Siap Tingkatkan Penjualan UMKM Anda?</h2>
+    <p>Dapatkan landing page profesional yang akan membantu usaha Anda tampil lebih terpercaya dan menarik lebih banyak pelanggan.</p>
+    <div class="cta-buttons">
+        <a href="#services" class="btn btn-primary">
+            <i class="fas fa-box-open"></i> Pilih Paket Sekarang
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-comments"></i> Konsultasi Gratis
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Landing Page UMKM</h3>
+            <p>Kami menyediakan layanan pembuatan landing page profesional khusus untuk UMKM di Indonesia. Dengan desain yang menarik dan fungsional, kami membantu bisnis Anda tumbuh dengan lebih cepat.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/@naila_sam" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/6281358396439" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-column">
+            <h3>Informasi Kontak</h3>
+            <ul class="contact-info">
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Alamat</h4>
+                        <p>Dsn.Gambirejo Gg 10, Tanjunganom, Nganjuk, Jawa Timur</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telepon</h4>
+                        <p>+62 813-5839-6439</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@nailamarsamda6@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Jam Kerja</h4>
+                        <p>Senin - Jumat: 09.00 - 17.00</p>
+                        <p>Sabtu: 09.00 - 13.00</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3>Layanan Kami</h3>
+            <ul class="contact-info">
+                <li><a href="#services" style="color: var(--putih); text-decoration: none;">Paket Hemat</a></li>
+                <li><a href="#services" style="color: var(--putih); text-decoration: none;">Paket Starter</a></li>
+                <li><a href="#services" style="color: var(--putih); text-decoration: none;">Paket Laris</a></li>
+                <li><a href="#services" style="color: var(--putih); text-decoration: none;">Paket Bisnis</a></li>
+                <li><a href="#services" style="color: var(--putih); text-decoration: none;">Paket Premium</a></li>
+                <li><a href="#contact" style="color: var(--putih); text-decoration: none;">Konsultasi Gratis</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        © 2026 Landing Page UMKM • Naila Marsamda Aulia_25_XII-TKJ1
+    </div>
+</footer>
+
+<script>
+function goTo(page) {
+    window.location.href = page;
+}
+
+// Testimoni Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('testimoniTrack');
+    const slides = document.querySelectorAll('.testimoni-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+    
+    // Event listeners for buttons
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    // Event listeners for dots
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            currentIndex = parseInt(this.getAttribute('data-slide'));
+            updateSlider();
+        });
+    });
+    
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
