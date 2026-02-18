@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Muslim - Gamis Syar'i Eksklusif</title>
+    
+    <!-- Google Fonts untuk kesan Elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #AA8C2C;
+            --light-gold: #F4E8C1;
+            --cream: #FFF9F0;
+            --brown-light: #F5E6D3;
+            --brown-medium: #E8D4B8;
+            --black: #121212;
+            --dark-grey: #1E1E1E;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-brown: #5A4A3A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-gold);
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            background-color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-gold);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+
+        .logo-img {
+            width: 50px; height: 50px; border-radius: 50%;
+            border: 2px solid var(--primary-gold); object-fit: cover;
+        }
+
+        .brand-name {
+            font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; color: var(--text-dark);
+        }
+        .brand-name span { color: var(--primary-gold); }
+
+        .nav-links { display: flex; gap: 25px; }
+
+        .nav-links a {
+            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
+            color: var(--text-dark); position: relative; font-weight: 500;
+        }
+
+        .nav-links a::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -5px; left: 0; background-color: var(--primary-gold);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--primary-gold); }
+
+        .menu-toggle { display: none; font-size: 1.5rem; color: var(--primary-gold); cursor: pointer; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(18,18,18,0.4), rgba(18,18,18,0.3)), url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; padding: 0 20px; margin-top: 70px;
+        }
+
+        .hero h1 { 
+            font-size: 3.5rem; margin-bottom: 1rem; 
+            color: var(--white); text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p { 
+            font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; 
+            color: var(--white); text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn-gold {
+            background: linear-gradient(45deg, var(--primary-gold), var(--dark-gold));
+            color: var(--black); padding: 12px 30px; border-radius: 50px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+            border: none; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6); }
+
+        /* --- PROFILE SECTION --- */
+        .profile-section {
+            padding: 80px 10%; background-color: var(--white);
+            display: flex; flex-wrap: wrap; align-items: center; gap: 40px;
+        }
+        .profile-img {
+            flex: 1 1 400px; border-radius: 10px; overflow: hidden;
+            border: 3px solid var(--primary-gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+        .profile-text { flex: 1 1 400px; }
+
+        .section-title {
+            font-size: 2.5rem; margin-bottom: 20px;
+            position: relative; display: inline-block;
+            color: var(--dark-gold);
+        }
+        .section-title::before {
+            content: ''; position: absolute; width: 50%; height: 3px;
+            bottom: -10px; left: 0; background-color: var(--primary-gold);
+        }
+
+        /* --- PRODUCTS --- */
+        .products-section { padding: 80px 5%; background-color: var(--brown-light); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+
+        .product-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white); border: 2px solid var(--brown-medium);
+            border-radius: 12px; overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+            border-color: var(--primary-gold);
+        }
+
+        .product-img { width: 100%; height: 350px; object-fit: cover; }
+        .product-info { padding: 20px; text-align: center; }
+
+        .product-name {
+            font-size: 1.2rem; color: var(--text-dark); margin-bottom: 5px;
+            font-family: 'Playfair Display', serif; font-weight: 600;
+        }
+        .product-desc { font-size: 0.85rem; color: var(--text-brown); margin-bottom: 10px; line-height: 1.4; }
+        .product-price { font-size: 1.2rem; color: var(--dark-gold); font-weight: 700; margin-bottom: 15px; display: block; }
+
+        .btn-buy {
+            display: inline-block; padding: 10px 25px; 
+            background: var(--primary-gold); color: var(--black);
+            border-radius: 50px; font-size: 0.9rem; font-weight: 600;
+            transition: 0.3s; border: 2px solid var(--primary-gold);
+        }
+        .btn-buy:hover { 
+            background: transparent; color: var(--primary-gold); 
+            transform: scale(1.05);
+        }
+
+        .featured-section { background-color: var(--white); padding: 80px 5%; }
+        .featured-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px; justify-content: center;
+        }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { padding: 80px 5%; background-color: var(--brown-light); text-align: center; }
+        .testimonial-container { position: relative; max-width: 1200px; margin: 0 auto; }
+
+        .testimonial-slider {
+            display: flex; gap: 30px; overflow-x: auto; scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; scrollbar-width: thin;
+            scrollbar-color: var(--primary-gold) var(--brown-medium); 
+            padding: 20px 10px; cursor: grab;
+        }
+        .testimonial-slider:active { cursor: grabbing; }
+        .testimonial-slider::-webkit-scrollbar { height: 8px; }
+        .testimonial-slider::-webkit-scrollbar-track { background: var(--brown-medium); border-radius: 10px; }
+        .testimonial-slider::-webkit-scrollbar-thumb { background: var(--primary-gold); border-radius: 10px; }
+
+        .testimonial-card {
+            flex: 0 0 350px; background: var(--white);
+            border: 2px solid var(--primary-gold); border-radius: 15px; padding: 30px;
+            scroll-snap-align: center; text-align: left; position: relative;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); }
+
+        .testimonial-header {
+            display: flex; align-items: center; gap: 15px; margin-bottom: 20px;
+            padding-bottom: 15px; border-bottom: 2px solid var(--brown-medium);
+        }
+        .testimonial-avatar {
+            width: 60px; height: 60px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: var(--black); font-weight: bold;
+        }
+        .testimonial-meta h4 { color: var(--dark-gold); font-size: 1.1rem; margin-bottom: 5px; }
+        .testimonial-rating { color: #FFD700; font-size: 0.9rem; }
+        .testimonial-text { color: var(--text-brown); line-height: 1.8; font-style: italic; font-size: 0.95rem; }
+        .testimonial-date { margin-top: 15px; font-size: 0.8rem; color: var(--primary-gold); opacity: 0.8; }
+
+        .slider-controls { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+        .slider-btn {
+            width: 50px; height: 50px; border-radius: 50%; background-color: var(--white);
+            border: 2px solid var(--primary-gold); color: var(--primary-gold); cursor: pointer;
+            display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+            transition: all 0.3s ease; font-weight: bold;
+        }
+        .slider-btn:hover { background-color: var(--primary-gold); color: var(--black); transform: scale(1.1); }
+
+        /* --- CONTACT SECTION (BLACK) --- */
+        .contact-section {
+            padding: 70px 5% 40px;
+            background-color: var(--black);
+            color: var(--white);
+            border-top: 4px solid var(--primary-gold);
+            border-bottom: 4px solid var(--primary-gold);
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-subtitle {
+            color: var(--text-grey);
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+        }
+
+        .brand-description {
+            background: linear-gradient(135deg, var(--dark-grey) 0%, #2a2a2a 100%);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--primary-gold);
+            text-align: left;
+        }
+
+        .brand-description h3 {
+            color: var(--primary-gold);
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-description p {
+            color: var(--text-grey);
+            line-height: 1.9;
+            font-size: 0.98rem;
+        }
+
+        .social-label {
+            color: var(--text-grey);
+            font-size: 1rem;
+            margin: 25px 0 20px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            width: 65px; height: 65px; border-radius: 50%;
+            background-color: var(--dark-grey);
+            display: flex; align-items: center; justify-content: center;
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+            font-size: 1.6rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--primary-gold);
+            color: var(--black);
+            transform: translateY(-6px) rotate(360deg);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .footer-bottom {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--text-grey);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom span { color: var(--primary-gold); font-weight: 600; }
+
+        /* --- FLOATING WA --- */
+        .float-wa {
+            position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px;
+            background-color: #25d366; color: #FFF; border-radius: 50px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+            z-index: 100; transition: 0.3s;
+        }
+        .float-wa:hover { transform: scale(1.15); background-color: #1ebc57; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .navbar { padding: 1rem 20px; }
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: absolute; top: 70px; right: -100%;
+                background-color: var(--white); flex-direction: column;
+                width: 100%; text-align: center; padding: 20px 0;
+                transition: 0.3s; border-bottom: 2px solid var(--primary-gold);
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { color: var(--text-dark); }
+            .hero h1 { font-size: 2.3rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 2rem; }
+            .testimonial-card { flex: 0 0 300px; }
+            .contact-title { font-size: 2rem; }
+            .social-btn { width: 55px; height: 55px; font-size: 1.4rem; }
+        }
+
+        /* Animasi Fade In */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="LOGO GOLDEN.png" alt="Logo Golden Muslim" class="logo-img">
+            <div class="brand-name">Golden <span>Muslim</span></div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#produk-unggulan">Produk</a></li>
+            <li><a href="#daftar-produk">Daftar Produk</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- BERANDA / HERO -->
+    <section id="beranda" class="hero">
+        <h1 class="reveal">keindahan dalam kesederhanaann</h1>
+        <p class="reveal">Golden Muslim menghadirkan koleksi gamis syar'i premium dengan sentuhan kemewahan emas dan kenyamanan maksimal untuk wanita muslimah modern.</p>
+        <a href="#produk-unggulan" class="btn-gold reveal">Lihat Koleksi</a>
+    </section>
+
+    <!-- PROFILE TOKO -->
+    <section class="profile-section reveal">
+        <div class="profile-img">
+            <img src="toko.jpg" alt="Foto Toko Golden Muslim">
+        </div>
+        <div class="profile-text">
+            <h2 class="section-title">Tentang Kami</h2>
+            <p style="margin-top: 20px; line-height: 1.9; color: var(--text-brown);">
+                Selamat datang di <strong style="color:var(--dark-gold)">Golden Muslim</strong>. Kami adalah brand fashion muslim yang berdedikasi untuk menyediakan busana syar'i yang tidak hanya menutup aurat, tetapi juga memancarkan aura kecantikan dan kepercayaan diri.
+                <br><br>
+                Dengan kombinasi warna elegan dan aksen emas yang mewah, setiap jahitan kami dibuat dengan ketelitian tinggi menggunakan bahan premium pilihan. Kami berkomitmen untuk menjadi teman terbaik dalam gaya berhijab Anda.
+            </p>
+        </div>
+    </section>
+
+    <!-- PRODUK UNGGULAN (1-3) -->
+    <section id="produk-unggulan" class="featured-section reveal">
+        <div class="section-header">
+            <h2 class="section-title">Produk Unggulan</h2>
+            <p style="color:var(--text-brown); margin-top:10px;">Pilihan terbaik minggu ini</p>
+        </div>
+        <div class="featured-grid">
+            <div class="product-card">
+                <img src="gamis.jpg" alt="Gamis Royal Gold" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Gamis Royal Gold Edition</h3>
+                    <p class="product-desc">Bahan satin silk premium dengan aksen bordir emas tangan.</p>
+                    <span class="product-price">Rp 450.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Gamis%20Royal%20Gold%20Edition" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="gamis coklat.jpg" alt="Dress Velvet Mewah" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Dress Velvet Mewah</h3>
+                    <p class="product-desc">Velvet import super lembut, jatuh, dan tidak menerawang.</p>
+                    <span class="product-price">Rp 385.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Dress%20Velvet%20Mewah" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="Outfit Cewek.jpg" alt="Abaya Black Gold" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Abaya Black Gold</h3>
+                    <p class="product-desc">Potongan abaya modern dengan detail kancing emas.</p>
+                    <span class="product-price">Rp 520.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Abaya%20Black%20Gold" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAFTAR PRODUK (8 Tambahan) -->
+    <section id="daftar-produk" class="products-section reveal">
+        <div class="section-header">
+            <h2 class="section-title">Koleksi Terbaru</h2>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="gamis zara.jpeg" alt="Tunik Premium" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Tunik Premium</h3>
+                    <p class="product-desc">Sehari-hari nyaman, bahan rayon viscose.</p>
+                    <span class="product-price">Rp 199.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Tunik%20Premium" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="gamis bruklat klasik.jpg" alt="Gamis Syar'i Basic" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Gamis Syar'i Basic</h3>
+                    <p class="product-desc">Simple dan elegan untuk acara formal.</p>
+                    <span class="product-price">Rp 275.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Gamis%20Syar'i%20Basic" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="tunik semi bruklat.jpg" alt="Set Khimar Syar'i" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Set Khimar Syar'i</h3>
+                    <p class="product-desc">Paket lengkap gamis dan khimar senada.</p>
+                    <span class="product-price">Rp 350.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Set%20Khimar%20Syar'i" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="tunik semi rok.jpg" alt="Maxi Dress Casual" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Maxi Dress Casual</h3>
+                    <p class="product-desc">Gaya santai namun tetap syar'i.</p>
+                    <span class="product-price">Rp 225.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Maxi%20Dress%20Casual" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="download.jpg" alt="Outer Cardigan" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Outer Cardigan Gold</h3>
+                    <p class="product-desc">Pelengkap outfit dengan benang emas.</p>
+                    <span class="product-price">Rp 150.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Outer%20Cardigan%20Gold" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="gamis zara.jpeg" alt="Rok Plisket" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Rok Plisket Premium</h3>
+                    <p class="product-desc">Potongan A-line yang mempercantik lekuk tubuh.</p>
+                    <span class="product-price">Rp 180.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Rok%20Plisket%20Premium" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="gamis bruklat klasik.jpg" alt="Gamis Pesta" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Gamis Pesta Brokat</h3>
+                    <p class="product-desc">Brokat halus dengan furing satin.</p>
+                    <span class="product-price">Rp 499.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Gamis%20Pesta%20Brokat" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="download.jpg" alt="Inner Ciput" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">Inner Ciput Anti Pusing</h3>
+                    <p class="product-desc">Bahan kaos jepang yang sangat lembut.</p>
+                    <span class="product-price">Rp 65.000</span>
+                    <a href="https://wa.me/6281358396439?text=Halo%20Golden%20Muslim,%20saya%20tertarik%20dengan%20Inner%20Ciput" class="btn-buy" target="_blank">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI - SLIDER BOX -->
+    <section id="testimoni" class="testimonials reveal">
+        <div class="testimonial-container">
+            <h2 class="section-title">Testimoni Pelanggan</h2>
+            <p style="color:var(--text-brown); margin-bottom: 40px;">Apa kata mereka tentang Golden Muslim</p>
+            
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SA</div>
+                        <div class="testimonial-meta">
+                            <h4>Siti Aminah</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Masya Allah, bahannya adem banget dipakai seharian. Warnanya juga persis kayak di foto, emasnya gak norak. Pengiriman cepat dan packing rapi. Makasih Golden Muslim!"
+                    </p>
+                    <div class="testimonial-date">15 Januari 2024</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">RK</div>
+                        <div class="testimonial-meta">
+                            <h4>Rina Kartika</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Pengiriman cepet banget, packing rapi. Gamisnya jatuh banget di badan, auto pede buat kondangan. Bakal langganan sih ini. Recommended seller!"
+                    </p>
+                    <div class="testimonial-date">20 Januari 2024</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">DL</div>
+                        <div class="testimonial-meta">
+                            <h4>Dewi Lestari</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Suka banget sama detail jahitannya, rapi banget. Bahan premium dengan harga yang masuk akal. Sukses terus ya kak Golden Muslim!"
+                    </p>
+                    <div class="testimonial-date">25 Januari 2024</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">FA</div>
+                        <div class="testimonial-meta">
+                            <h4>Fatimah Azzahra</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Udah order 3 kali dan gak pernah kecewa. Kualitas selalu konsisten, pelayanan ramah. Love it! Ini jadi toko gamis favorit saya."
+                    </p>
+                    <div class="testimonial-date">1 Februari 2024</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">NA</div>
+                        <div class="testimonial-meta">
+                            <h4>Nurul Azizah</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Gamisnya cantik banget, sesuai ekspektasi. Ukuran pas dan bahannya tidak menerawang. Terima kasih Golden Muslim atas produk berkualitasnya!"
+                    </p>
+                    <div class="testimonial-date">5 Februari 2024</div>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn" onclick="scrollSlider(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn" onclick="scrollSlider(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK SECTION (BLACK) -->
+    <section id="kontak" class="contact-section reveal">
+        <div class="contact-container">
+            <h2 class="contact-title">Hubungi Kami</h2>
+            <p class="contact-subtitle">Siap melayani pertanyaan dan pemesanan Anda</p>
+            
+            <!-- Brand Description -->
+            <div class="brand-description">
+                <h3><i class="fas fa-crown"></i> Golden Muslim</h3>
+                <p>
+                    Menyediakan busana muslim syar'i premium dengan sentuhan elegan dan mewah. 
+                    Kualitas terbaik untuk wanita muslimah modern yang mengutamakan gaya dan syariat. 
+                    Setiap produk dibuat dengan ketelitian tinggi menggunakan bahan premium pilihan.
+                </p>
+            </div>
+
+            <p class="social-label">Ikuti kami di media sosial:</p>
+            
+            <!-- Social Media Icons Only -->
+            <div class="social-links">
+                <a href="https://instagram.com/goldenmuslim" target="_blank" class="social-btn" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/@goldenmuslim" target="_blank" class="social-btn" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/6281358396439" target="_blank" class="social-btn" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span>Golden Muslim</span>. All Rights Reserved.</p>
+                <p style="margin-top: 8px; font-size: 0.85rem;">Elegance & Modesty in Every Piece</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/6281358396439" class="float-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Toggle Mobile Menu
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+        });
+
+        // Scroll Reveal Animation
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for(var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 150;
+                if(revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        reveal();
+
+        // Testimonial Slider
+        const slider = document.getElementById('testimonialSlider');
+        function scrollSlider(direction) {
+            const cardWidth = 380;
+            slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+        }
+
+        // Drag functionality
+        let isDown = false, startX, scrollLeft;
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true; slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+        slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return; e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch events
+        slider.addEventListener('touchstart', (e) => {
+            isDown = true; startX = e.touches[0].pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('touchend', () => { isDown = false; });
+        slider.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>
