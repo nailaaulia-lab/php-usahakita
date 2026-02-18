@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Muslim - paling oke</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f4e9 0%, #f0e9d0 100%);
+            color: #a1746c;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section with Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-brand img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #d4af37;
+            box-shadow: 0 4px 12px rgba(93, 64, 55, 0.2);
+        }
+
+        .brand-info h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #5d4037 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-info p {
+            color: #6d4c41;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        /* Navigation Menu - Perbaikan */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin-left: 40px;
+        }
+
+        .nav-menu li a {
+            color: #3e2723;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            background: rgba(248, 244, 233, 0.7);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .nav-menu li a:hover {
+            background: linear-gradient(135deg, #d4af37 0%, #a67c00 100%);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 70%;
+            height: 2px;
+            background: #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu li a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(93, 64, 55, 0.85), rgba(62, 39, 35, 0.9)), url('https://images.unsplash.com/photo-1595152772835-219674b2d69a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(93, 64, 55, 0.8) 0%, rgba(62, 39, 35, 0.9) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3.2em;
+            margin-bottom: 20px;
+            color: #ffffff; /* DIUBAH: Gradient dihapus, menjadi putih solid */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 175, 55, 0.5);
+            font-weight: 700;
+            letter-spacing: -1px;
+            /* Gradient dihapus */
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0 auto 35px;
+            font-weight: 300;
+            line-height: 1.5;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Profile Section */
+        .profile-section {
+            background: white;
+            padding: 70px 0;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .profile-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #5d4037 0%, #d4af37 25%, #5d4037 50%, #d4af37 75%, #5d4037 100%);
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-image {
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border: 8px solid white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            background: linear-gradient(135deg, #d4af37, #a67c00);
+            z-index: 1;
+            border-radius: 12px;
+            filter: blur(15px);
+            opacity: 0.6;
+        }
+
+        .profile-text h2 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            color: #5d4037;
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #a67c00);
+            border-radius: 2px;
+        }
+
+        .profile-text p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #4e342e;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 70px 0;
+            background: white;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .products-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 30%), 
+                        radial-gradient(circle at bottom left, rgba(93, 64, 55, 0.05) 0%, rgba(93, 64, 55, 0) 30%);
+            z-index: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 50px;
+            color: #5d4037;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #a67c00);
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 20px rgba(212, 175, 55, 0.2);
+            z-index: 10;
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #5d4037 0%, #d4af37 50%, #5d4037 100%);
+            z-index: 3;
+        }
+
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0) 70%);
+            z-index: 1;
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #f8f4e9;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 15px rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+        }
+
+        .product-name {
+            font-size: 1.45em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #3e2723;
+            position: relative;
+            display: inline-block;
+        }
+
+        .product-name::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background: #d4af37;
+            border-radius: 1px;
+        }
+
+        .product-price {
+            font-size: 1.7em;
+            color: #d4af37;
+            font-weight: 700;
+            margin: 15px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .product-price::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #a67c00, transparent);
+        }
+
+        .product-description {
+            color: #5d4037;
+            font-size: 1.05em;
+            margin-bottom: 25px;
+            min-height: 60px;
+            font-weight: 300;
+        }
+
+        .btn-order {
+            background: linear-gradient(135deg, #5d4037 0%, #3e2723 100%);
+            color: #f8f4e9;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.15em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(93, 64, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-order:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 25px rgba(93, 64, 55, 0.4), 0 0 15px rgba(212, 175, 55, 0.3);
+            color: white;
+            border-color: #d4af37;
+        }
+
+        .btn-order::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #d4af37 0%, #a67c00 100%);
+            z-index: -1;
+            transition: all 0.4s ease;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .btn-order:hover::before {
+            transform: scaleX(1);
+        }
+
+        .btn-order i {
+            margin-right: 10px;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        .btn-order:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Additional Products */
+        .additional-products {
+            background: linear-gradient(135deg, #f9f6ee 0%, #f0e9d8 100%);
+            padding: 45px;
+            border-radius: 20px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(93, 64, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .additional-products::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 70%);
+            z-index: 0;
+        }
+
+        .additional-products h3 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 35px;
+            color: #5d4037;
+            position: relative;
+            z-index: 2;
+        }
+
+        .additional-products h3::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #a67c00);
+            border-radius: 2px;
+        }
+
+        /* Social Media Section - DITAMBAHKAN SENTUHAN HITAM */
+        .social-section {
+            background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%); /* Background hitam ditambahkan */
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); /* Shadow lebih gelap */
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #d4af37; /* Border emas lebih tebal */
+        }
+
+        .social-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #000000 0%, #d4af37 25%, #000000 50%, #d4af37 75%, #000000 100%);
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+        }
+
+        .social-section h2 {
+            position: relative;
+            z-index: 2;
+            color: #f8f4e9; /* Teks putih untuk kontras dengan background hitam */
+        }
+
+        .social-section p {
+            font-size: 1.2em;
+            color: #e0d3c5; /* Teks lebih terang */
+            max-width: 650px;
+            margin: 15px auto 30px;
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-link {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.1em;
+            color: white;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Shadow lebih gelap */
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); /* Background hitam */
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #d4af37;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #d4af37 0%, #a67c00 100%);
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .social-link:hover::before {
+            transform: scaleX(1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.4);
+            color: #ffffff;
+            border-color: #d4af37;
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover i {
+            transform: scale(1.15);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2em;
+            text-decoration: none;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+            transition: all 0.3s ease;
+            border: 3px solid #d4af37;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15) rotate(15deg);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.8), 0 0 20px rgba(212, 175, 55, 0.5);
+            border-color: #a67c00;
+        }
+
+        /* Footer - DITAMBAHKAN SENTUHAN HITAM */
+        footer {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); /* Background hitam pekat */
+            padding: 40px 0 30px;
+            text-align: center;
+            color: #f8f4e9;
+            border-radius: 20px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.35); /* Shadow lebih gelap */
+            border-top: 3px solid #d4af37; /* Border emas lebih tebal */
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #d4af37 0%, #a67c00 50%, #d4af37 100%);
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+        }
+
+        footer p {
+            font-size: 1.15em;
+            color: rgba(248, 244, 233, 0.9); /* Teks lebih terang */
+            margin: 8px 0;
+            font-weight: 300;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f9f1e0;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.7em;
+            }
+            
+            .hero p {
+                font-size: 1.25em;
+            }
+            
+            .profile-content {
+                gap: 35px;
+            }
+            
+            .profile-image img {
+                max-width: 400px;
+            }
+            
+            .nav-menu {
+                gap: 15px;
+            }
+            
+            .nav-menu li a {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .brand-info h1 {
+                font-size: 2.1em;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero h2 {
+                font-size: 2.3em;
+            }
+
+            .hero p {
+                font-size: 1.15em;
+                padding: 0 15px;
+            }
+
+            .section-title {
+                font-size: 2.3em;
+                left: auto;
+                transform: none;
+                margin-bottom: 40px;
+            }
+
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+
+            .additional-products {
+                padding: 30px 20px;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .social-link {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8em;
+            }
+
+            .whatsapp-float {
+                bottom: 25px;
+                right: 25px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .whatsapp-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.05em;
+                margin-bottom: 25px;
+            }
+            
+            .btn-order {
+                padding: 12px 25px;
+                font-size: 1.05em;
+            }
+            
+            .product-name {
+                font-size: 1.3em;
+            }
+            
+            .product-price {
+                font-size: 1.5em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .additional-products h3 {
+                font-size: 1.9em;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-menu li a {
+                font-size: 1.1em;
+                padding: 12px 30px;
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-brand">
+                    <img src="LOGO GOLDEN.png" alt="Logo Brand">
+                    <div class="brand-info">
+                        <h1>GOLDEN MUSLIM</h1>
+                        <p>Keindahan Muslimah untuk gaya hidup anda</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Menu - Perbaikan: Tombol terpisah per kalimat -->
+                <ul class="nav-menu">
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+                    <li><a href="#products"><i class="fas fa-shopping-bag"></i> Produk</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>keindahan dalam kesederhanaann </h2>
+                <p>Kami menghadirkan gamis berkualitas unggul dengan sentuhan elegan yang memadukan keindahan dan keanggunan. Dirancang secara khusus dengan memperhatikan detail, kenyamanan, dan nilai estetika.</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda" class="btn-order">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section" id="about">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-image">
+                    <img src="toko.jpg" alt="Profile Usaha">
+                </div>
+                <div class="profile-text">
+                    <h2>Tentang Kami</h2>
+                    <p>Golden Muslim berlokasi di Jl. Ki Ageng Kerto, Gambirejo, Warujayeng, Tanjunganom, Nganjuk. Didirikan pada tahun 2026.</p>
+                    <p>Kami hadir dengan visi menghadirkan produk berkualitas unggul yang memadukan keindahan dan keanggunan. Kami percaya bahwa setiap produk yang kami tawarkan mampu meningkatkan rasa percaya diri serta memberikan kenyamanan bagi Anda dalam setiap aktivitas.</p>
+                    <p>terus berinovasi dalam menghadirkan koleksi terbaik yang mencerminkan keanggunan dan nilai estetika. Setiap produk melalui proses seleksi yang ketat untuk memastikan standar kualitas yang tinggi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Produk Unggulan</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="gamis coklat.jpg" alt="Produk 1" class="product-image">
+                    <h3 class="product-name">Abaya Gadis</h3>
+                    <p class="product-price">Rp 600.000</p>
+                    <p class="product-description">Dengan desain anggun menghadirkan kesan sederhana namun berkelas. Dirancang dari bahan pilihan yang nyaman dipakai, cocok untuk menemani berbagai aktivitas dengan tetap tampil menawan.</p>
+                    <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Tas%20Kulit%20Premium" class="btn-order">
+                        <i class="fab fa-whatsapp"></i> Pesan
+                    </a>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="gamis.jpg" alt="Produk 2" class="product-image">
+                    <h3 class="product-name">Gamis Burkat</h3>
+                    <p class="product-price">Rp 700.000</p>
+                    <p class="product-description">Dengan detail motif yang indah dan elegan, dirancang untuk sisi anggun dan feminin. Cocok dikenakan pada momen spesial, menghadirkan kesan mewah tanpa mengesampingkan kenyamanan.</p>
+                    <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Jam%20Tangan%20Emas" class="btn-order">
+                        <i class="fab fa-whatsapp"></i> Pesan
+                    </a>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="Outfit Cewek.jpg" alt="Produk 3" class="product-image">
+                    <h3 class="product-name">abaya Turki</h3>
+                    <p class="product-price">Rp 980.000</p>
+                    <p class="product-description">dengan sentuhan desain khas yang mewah dan detail eksklusif. Memadukan gaya modern dan keanggunan klasik, memberikan tampilan istimewa serta kenyamanan maksimal di setiap kesempatan.</p>
+                    <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Parfum%20Eksklusif" class="btn-order">
+                        <i class="fab fa-whatsapp"></i> Pesan
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional Products -->
+            <div class="additional-products">
+                <h3>Produk Tambahan</h3>
+                <div class="products-grid">
+                    <!-- Additional Product 1 -->
+                    <div class="product-card">
+                        <img src="tunik semi bruklat.jpg" alt="Produk Tambahan 1" class="product-image">
+                        <h3 class="product-name">Tunik Brukat</h3>
+                        <p class="product-price">Rp 195.000</p>
+                        <p class="product-description">Tunik dengan motif yang elegan menunjang tampilan anda</p>
+                        <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Dompet%20Kulit" class="btn-order">
+                            <i class="fab fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+
+                    <!-- Additional Product 2 -->
+                    <div class="product-card">
+                        <img src="tunik semi rok.jpg" alt="Produk Tambahan 2" class="product-image">
+                        <h3 class="product-name">Tunik semi rok</h3>
+                        <p class="product-price">Rp 150.000</p>
+                        <p class="product-description">menggunakan bahan kain jatuh menambah kesan elegan tampilan anda</p>
+                        <a href="https://wa.me/6281234567890?text=Saya%20ingin%20memesan%20Sabuk%20Kulit" class="btn-order">
+                            <i class="fab fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+
+                    <!-- Additional Product 3 -->
+                    <div class="product-card">
+                        <img src="gamis bruklat klasik.jpg" alt="Produk Tambahan 3" class="product-image">
+                        <h3 class="product-name">Gamis brukat klasik</h3>
+                        <p class="product-price">Rp 165.000</p>
+                        <p class="product-description">dengan tampilan klasik yang menawan cocok untuk anda</p>
+                        <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Kacamata%20Hitam" class="btn-order">
+                            <i class="fab fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+
+                    <!-- Additional Product 4 -->
+                    <div class="product-card">
+                        <img src="download.jpg" alt="Produk Tambahan 4" class="product-image">
+                        <h3 class="product-name">Abaya selly</h3>
+                        <p class="product-price">Rp 200.000</p>
+                        <p class="product-description">abaya hitam dengan motif menarik menambah tampilan para muslimah</p>
+                        <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Syal%20Sutra" class="btn-order">
+                            <i class="fab fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+
+                    <!-- Additional Product 5 -->
+                    <div class="product-card">
+                        <img src="gamis zara.jpeg" alt="Produk Tambahan 5" class="product-image">
+                        <h3 class="product-name">Gamis Zara</h3>
+                        <p class="product-price">Rp 150.000</p>
+                        <p class="product-description">Dengan desian yang sederhana namun dapat menambah value</p>
+                        <a href="https://wa.me/6281358396439?text=Saya%20ingin%20memesan%20Topi%20Fedora" class="btn-order">
+                            <i class="fab fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section - DENGAN SENTUHAN HITAM -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title">Ikuti Kami</h2>
+            <p>Temukan inspirasi gamis elegan dan penawaran spesial dengan mengikuti media sosial kami.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/syari_collection13" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/@byzmya.2" target="_blank" class="social-link tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://facebook.com/syari_collection13" target="_blank" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer - DENGAN SENTUHAN HITAM PEKAT -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2026 ELITE COLLECTION. All Rights Reserved.</p>
+            <p>Hubungi kami: info@goldenmuslim12.com | (021) 8888-9999</p>
+            <p>JL.Kiageng Kerto, Nganjuk, Jawa Timur</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling untuk anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Animasi saat scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.product-card, .profile-section, .social-section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize opacity dan transform untuk animasi
+        document.querySelectorAll('.product-card, .profile-section, .social-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // WhatsApp button pulse animation on hover
+        const whatsappBtn = document.querySelector('.whatsapp-btn');
+        whatsappBtn.addEventListener('mouseenter', () => {
+            whatsappBtn.style.animation = 'none';
+        });
+        
+        whatsappBtn.addEventListener('mouseleave', () => {
+            whatsappBtn.style.animation = 'pulse 2s infinite';
+        });
+    </script>
+</body>
+</html>
