@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDEN MUSLIM - Paling okee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-secondary: #E6C566;
+            --gold-accent: #F5D797;
+            --gold-dark: #B8860B;
+            --brown-primary: #2C1B11;
+            --brown-secondary: #4A3728;
+            --brown-accent: #6B543F;
+            --brown-dark: #1A0F08;
+            --white: #FFFFFF;
+            --cream: #FFF8F0;
+            --gray-light: #f5f5f5;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.25);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--brown-primary), var(--brown-secondary));
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(44, 27, 17, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--gold-primary);
+            transition: var(--transition);
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--gold-primary);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--gold-accent);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold-primary);
+            color: var(--brown-primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+            border: 2px solid var(--gold-primary);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button i {
+            font-size: 20px;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--gold-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gold-dark);
+            transition: var(--transition);
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .btn-consult {
+            background: transparent;
+            border: 2px solid var(--gold-primary);
+            color: var(--gold-primary);
+        }
+
+        .btn-consult:hover {
+            background: var(--gold-primary);
+            color: var(--brown-primary);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: rgba(62, 39, 35, 0.95);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold-primary);
+        }
+
+        .section-title p {
+            color: var(--gold-accent);
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gold-accent);
+            line-height: 1.8;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Featured Products */
+        .featured {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--brown-secondary), var(--brown-primary));
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .product-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold-primary);
+            color: var(--brown-primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .product-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 3px solid var(--gold-primary);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Catalog Section - 20+ Products */
+        .catalog {
+            padding: 100px 0;
+            background: rgba(62, 39, 35, 0.9);
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .catalog-item {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .catalog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .catalog-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .catalog-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .catalog-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .catalog-item:hover .catalog-overlay {
+            opacity: 1;
+        }
+
+        .catalog-overlay .cta-button {
+            background: var(--brown-primary);
+            color: var(--gold-primary);
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+
+        .catalog-info {
+            padding: 20px;
+        }
+
+        .catalog-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+        }
+
+        .catalog-info p {
+            color: var(--gold-accent);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* Free Consultation Section */
+        .consultation {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .consultation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(44, 27, 17, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .consultation-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .consultation h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--brown-primary);
+            margin-bottom: 20px;
+        }
+
+        .consultation p {
+            font-size: 18px;
+            color: var(--brown-secondary);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .consult-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 36px;
+            color: var(--brown-primary);
+            margin-bottom: 10px;
+        }
+
+        .benefit-title {
+            font-weight: 700;
+            color: var(--brown-primary);
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .benefit-desc {
+            font-size: 14px;
+            color: var(--brown-secondary);
+        }
+
+        .btn-consult-large {
+            background: var(--brown-primary);
+            color: var(--gold-primary);
+            padding: 18px 50px;
+            font-size: 20px;
+            border: 3px solid var(--brown-primary);
+        }
+
+        .btn-consult-large:hover {
+            background: transparent;
+            color: var(--brown-primary);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* Testimonials Section - 10 Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--brown-secondary), var(--brown-primary));
+            position: relative;
+        }
+
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 50px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .testimonial {
+            min-width: 100%;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            position: relative;
+            border: 2px solid var(--gold-primary);
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 8rem;
+            color: var(--gold-primary);
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .testimonial-chat {
+            flex: 1;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .chat-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brown-primary);
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .chat-info h4 {
+            color: var(--gold-primary);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .chat-info p {
+            color: var(--gold-accent);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .chat-messages {
+            margin-top: 15px;
+        }
+
+        .chat-message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .chat-message::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: -10px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 10px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
+
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .slider-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gray-light);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid var(--gold-primary);
+        }
+
+        .slider-dot.active {
+            background: var(--gold-primary);
+            transform: scale(1.3);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: rgba(62, 39, 35, 0.9);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: var(--gold-primary);
+            font-size: 40px;
+        }
+
+        /* Contact & Map Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--brown-primary), var(--brown-dark));
+            position: relative;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: var(--gold-primary);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold-primary);
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            color: var(--gold-primary);
+            font-size: 24px;
+            min-width: 30px;
+        }
+
+        .contact-text h4 {
+            color: var(--gold-primary);
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .contact-text p, .contact-text a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-text a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-primary);
+            font-size: 24px;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            background: var(--gold-primary);
+            color: var(--brown-primary);
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .social-link.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+        .social-link.tiktok { background: linear-gradient(45deg, #69C9D0, #8A4FFF, #FE2C55); color: white; }
+        .social-link.facebook { background: #1877F2; color: white; }
+        .social-link.telegram { background: #0088cc; color: white; }
+        .social-link.youtube { background: #ff0000; color: white; }
+
+        .map-container {
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            border: 3px solid white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gold-accent);
+            text-decoration: none;
+            transition: var(--transition);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        .copyright {
+            color: var(--gray-light);
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                text-align: center;
+                padding: 40px 0;
+                transition: var(--transition);
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .about-content, .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .consult-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .catalog-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-content {
+                flex-direction: column;
+            }
+
+            .testimonial-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .map-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="LOGO GOLDEN.png" alt="Logo Brand">
+                    <div class="logo-text">ELITE GOLD</div>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#featured">Produk Unggulan</a></li>
+                    <li><a href="#catalog">Katalog (20+)</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#gallery">Galeri</a></li>
+                    <li><a href="#consultation">Konsultasi Gratis</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Memancarkan keindahan dalam kesederhanaan</h1>
+                <p>Koleksi terbaik kami dengan desain elegan, detail istimewa, dan kualitas terbaik untuk menemani setiap aktivitas Anda.</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="cta-button">
+                        <i class="fas fa-shopping-bag"></i> Lihat Katalog
+                    </a>
+                    <a href="#consultation" class="cta-button btn-consult">
+                        <i class="fas fa-comments"></i> Konsultasi Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang Kami</h2>
+                <p>Profile Usaha Lengkap</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Brand Premium Berkualitas</h3>
+                    <p>Golden Muslim berlokasi di Jl. Ki Ageng Kerto, Gambirejo, Warujayeng, Tanjunganom, Nganjuk. Didirikan pada tahun 2026.</p>
+                    <p>Kami hadir dengan visi menghadirkan produk berkualitas unggul yang memadukan keindahan dan keanggunan. Kami percaya bahwa setiap produk yang kami tawarkan mampu meningkatkan rasa percaya diri serta memberikan kenyamanan bagi Anda dalam setiap aktivitas.</p>
+                    <p>terus berinovasi dalam menghadirkan koleksi terbaik yang mencerminkan keanggunan dan nilai estetika. Setiap produk melalui proses seleksi yang ketat untuk memastikan standar kualitas yang tinggi</p>
+                </div>
+                <div class="about-image">
+                    <img src="toko.jpg" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>3 Produk Unggulan</h2>
+                <p>Produk premium terbaik kami yang paling diminati oleh pelanggan</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-badge">BEST SELLER</div>
+                    <div class="product-image">
+                        <img src="gamis coklat.jpg" alt="Premium Collection">
+                    </div>
+                    <h3>Abaya Gadis</h3>
+                    <p>Dengan desain anggun menghadirkan kesan sederhana namun berkelas. Dirancang dari bahan pilihan yang nyaman dipakai, cocok untuk menemani berbagai aktivitas dengan tetap tampil menawan.</p>
+                    <div class="product-price">Rp 600.000</div>
+                    <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Premium%20Collection%20A" class="cta-button">
+                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">NEW ARRIVAL</div>
+                    <div class="product-image">
+                        <img src="gamis bruklat klasik.jpg" alt="Luxury Edition">
+                    </div>
+                    <h3>gamis burkat</h3>
+                    <p>Dengan detail motif yang indah dan elegan, dirancang untuk sisi anggun dan feminin. Cocok dikenakan pada momen spesial, menghadirkan kesan mewah tanpa mengesampingkan kenyamanan.</p>
+                    <div class="product-price">Rp 2.250.000</div>
+                    <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Luxury%20Edition%20B" class="cta-button">
+                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">EXCLUSIVE</div>
+                    <div class="product-image">
+                        <img src="Outfit Cewek.jpg" alt="Exclusive Series">
+                    </div>
+                    <h3>abaya turki</h3>
+                    <p>dengan sentuhan desain khas yang mewah dan detail eksklusif. Memadukan gaya modern dan keanggunan klasik, memberikan tampilan istimewa serta kenyamanan maksimal di setiap kesempatan.</p>
+                    <div class="product-price">Rp 980.000</div>
+                    <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Exclusive%20Series%20C" class="cta-button">
+                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section - 20 Products -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Katalog Lengkap 20+ Produk</h2>
+                <p>Temukan berbagai produk  kami yang siap memenuhi kebutuhan Anda</p>
+            </div>
+            <div class="catalog-grid">
+                <!-- 20 Products -->
+                <div class="catalog-item">
+                    <img src="gamis zara.jpeg" alt="Produk 1">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Classic%20Brown%20Bag" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis zara</h3>
+                        <p>gamis dengan bahan premium</p>
+                        <div class="product-price">Rp 850.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis.jpg" alt="Produk 2">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Accent%20Wallet" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis sally</h3>
+                        <p>gamis dengan aksen elegan</p>
+                        <div class="product-price">Rp 450.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis bruklat klasik.jpg" alt="Produk 3">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20dengan%20Premium%20Watch" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>bruklat klasik</h3>
+                        <p>gamis desain klasik dan menarik</p>
+                        <div class="product-price">Rp 600.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="tunik semi bruklat.jpg" alt="Produk 4">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Brown%20Leather%20Belt" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>tunik bruklat</h3>
+                        <p>dengan desain premium</p>
+                        <div class="product-price">Rp 350.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="tunik semi rok.jpg" alt="Produk 5">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Pen%20Set" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>tunik rok</h3>
+                        <p>Set tunik yang elegan</p>
+                        <div class="product-price">Rp 280.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis.jpg" alt="Produk 6">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Luxury%20Notebook" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis anisa</h3>
+                        <p>gamis yang elegan</p>
+                        <div class="product-price">Rp 180.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis zara.jpeg" alt="Produk 7">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Brown%20Leather%20Shoes" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3> gamis jesika</h3>
+                        <p>gamis yang elegan</p>
+                        <div class="product-price">Rp 950.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis bruklat klasik.jpg" alt="Produk 8">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Cufflinks" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>burkat klasik</h3>
+                        <p>gamis yang elegan</p>
+                        <div class="product-price">Rp 220.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="tunik semi bruklat.jpg" alt="Produk 9">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Premium%20Sunglasses" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>tunik bruklat</h3>
+                        <p>gamis yang elegan</p>
+                        <div class="product-price">Rp 650.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="tunik semi rok.jpg" alt="Produk 10">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Brown%20Leather%20Gloves" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>tunik rok</h3>
+                        <p>one set yang elegan</p>
+                        <div class="product-price">Rp 420.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis zara.jpeg" alt="Produk 11">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Tie%20Clip" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis zara</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 195.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis.jpg" alt="Produk 12">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Luxury%20Keychain" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis jesika</h3>
+                        <p>Gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 150.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="tunik semi bruklat.jpg" alt="Produk 13">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/628158396439?text=Halo%20saya%20tertarik%20dengan%20Brown%20Leather%20Briefcase" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>tunik bruklat</h3>
+                        <p>dengan fotif yang menarik</p>
+                        <div class="product-price">Rp 250.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis.jpg" alt="Produk 14">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Money%20Clip" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis jesika</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 230.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="tunik semi rok.jpg" alt="Produk 15">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Premium%20Umbrella" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>tunik one set</h3>
+                        <p>one set yang elegan</p>
+                        <div class="product-price">Rp 320.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis zara.jpeg" alt="Produk 16">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Brown%20Leather%20Passport%20Holder" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis zara</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 280.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="download.jpg" alt="Produk 17">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Bookmark" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis cantika</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 120.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis.jpg" alt="Produk 18">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Luxury%20Card%20Holder" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis jesika</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 210.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="gamis zara.jpeg" alt="Produk 19">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Brown%20Leather%20Portfolio" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis zara</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 450.000</div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img src="download.jpg" alt="Produk 20">
+                    <div class="catalog-overlay">
+                        <a href="https://wa.me/6281358396439?text=Halo%20saya%20tertarik%20dengan%20Gold%20Lapel%20Pin" class="cta-button">Order</a>
+                    </div>
+                    <div class="catalog-info">
+                        <h3>gamis cantika</h3>
+                        <p>gamis dengan tampilan elegan</p>
+                        <div class="product-price">Rp 165.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Consultation Section -->
+    <section class="consultation" id="consultation">
+        <div class="container">
+            <div class="consultation-content">
+                <h2>✨ KONSULTASI GRATIS ✨</h2>
+                <p>Dapatkan konsultasi gratis dengan ahli kami untuk membantu Anda memilih produk yang tepat sesuai kebutuhan dan budget Anda</p>
+                
+                <div class="consult-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="benefit-title">Expert Advice</div>
+                        <div class="benefit-desc">Konsultasi dengan ahli produk kami</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="benefit-title">No Cost</div>
+                        <div class="benefit-desc">100% Gratis tanpa biaya apapun</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-title">Fast Response</div>
+                        <div class="benefit-desc">Respon cepat dalam 24 jam</div>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/6281358396439?text=Halo%20ELITE%20GOLD%2C%20saya%20ingin%20konsultasi%20gratis%20tentang%20produk" class="cta-button btn-consult-large">
+                    <i class="fas fa-comments"></i> Mulai Konsultasi Gratis Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - 10 Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>10 Testimoni Pelanggan</h2>
+                <p>Lihat bukti kepuasan pelanggan kami dalam format chat asli</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">A</div>
+                                    <div class="chat-info">
+                                        <h4>Anisa Putri</h4>
+                                        <p>15 Jan 2026, 14:23</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Wah produknya bagus banget! Packing rapi dan pengiriman cepat. Sangat puas dengan pembelian saya. Recomended banget!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&q=80" alt="Testimoni 1">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">B</div>
+                                    <div class="chat-info">
+                                        <h4>Budi Santoso</h4>
+                                        <p>20 Jan 2026, 09:15</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Pelayanan customer servicenya sangat ramah dan profesional. Produk sesuai deskripsi dan kualitasnya top markotop!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" alt="Testimoni 2">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">D</div>
+                                    <div class="chat-info">
+                                        <h4>Dewi Lestari</h4>
+                                        <p>25 Jan 2026, 16:42</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Sudah 3 kali order dan selalu puas. Rekomendasi banget untuk yang cari produk premium dengan harga terjangkau. Kualitasnya mantap!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&q=80" alt="Testimoni 3">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">R</div>
+                                    <div class="chat-info">
+                                        <h4>Rina Wijaya</h4>
+                                        <p>28 Jan 2026, 11:30</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Produknya original dan berkualitas premium. Packing super rapi dan ada thank you cardnya. Pelayanan yang sangat personal!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&q=80" alt="Testimoni 4">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">J</div>
+                                    <div class="chat-info">
+                                        <h4>John Doe</h4>
+                                        <p>2 Feb 2026, 15:20</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Fast response dan produk sesuai ekspektasi. Harga kompetitif untuk kualitas sekelas ini. Will definitely order again!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" alt="Testimoni 5">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">S</div>
+                                    <div class="chat-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>5 Feb 2026, 10:05</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Love the quality! The product exceeded my expectations. Packaging was beautiful and delivery was on time. Highly recommended!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1573496394822-47942f82c185?w=400&h=400&fit=crop&q=80" alt="Testimoni 6">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">M</div>
+                                    <div class="chat-info">
+                                        <h4>Michael Chen</h4>
+                                        <p>8 Feb 2026, 13:45</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Excellent product and service! The attention to detail is impressive. Will be a returning customer for sure. Thank you!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1560250097584-42c1c5a6a0ab?w=400&h=400&fit=crop&q=80" alt="Testimoni 7">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">E</div>
+                                    <div class="chat-info">
+                                        <h4>Emma Wilson</h4>
+                                        <p>10 Feb 2026, 09:30</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Amazing quality and fast shipping! The product looks even better in person. Customer service was very helpful too. 5 stars!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop&q=80" alt="Testimoni 8">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 9 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">D</div>
+                                    <div class="chat-info">
+                                        <h4>David Smith</h4>
+                                        <p>12 Feb 2026, 14:15</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Very satisfied with my purchase! The product is exactly as described and the quality is outstanding. Great value for money!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1560250097584-42c1c5a6a0ab?w=400&h=400&fit=crop&q=80" alt="Testimoni 9">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 10 -->
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="testimonial-chat">
+                                <div class="chat-header">
+                                    <div class="chat-avatar">L</div>
+                                    <div class="chat-info">
+                                        <h4>Lisa Brown</h4>
+                                        <p>14 Feb 2026, 16:50</p>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <div class="chat-message">
+                                        Absolutely love it! The craftsmanship is exceptional and the customer service was top-notch. Will definitely recommend to friends!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1573496394822-47942f82c185?w=400&h=400&fit=crop&q=80" alt="Testimoni 10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Aktivitas & Dokumentasi</h2>
+                <p>Dokumentasi kegiatan, momen spesial, dan behind the scenes kami</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="gamis bruklat klasik.jpg" alt="Gallery 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis.jpg" alt="Gallery 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis zara.jpeg" alt="Gallery 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-store"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis coklat.jpg" alt="Gallery 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis.jpg" alt="Gallery 5">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="tunik semi bruklat.jpg" alt="Gallery 6">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="tunik semi rok.jpg" alt="Gallery 7">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis coklat.jpg" alt="Gallery 8">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis zara.jpeg" alt="Gallery 9">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gamis zara.jpeg" alt="Gallery 10">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Temukan Kami</h2>
+                <p>Kunjungi lokasi kami atau hubungi melalui media sosial dan WhatsApp</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Alamat Lengkap</h4>
+                                <p>Jl. Premium Gold No. 123, Menteng, Jakarta Pusat 10310, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telepon</h4>
+                                <p>+62 21 1234 5678</p>
+                                <p>+62 812 3456 7890 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@elitegold.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Jumat: 09.00 - 18.00 WIB</p>
+                                <p>Sabtu: 10.00 - 15.00 WIB</p>
+                                <p>Minggu: Tutup</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin: 30px 0 20px;">Ikuti Kami di Media Sosial</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/elitegold" class="social-link instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@elitegold" class="social-link tiktok" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://facebook.com/elitegold" class="social-link facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://t.me/elitegold" class="social-link telegram" target="_blank">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://youtube.com/@elitegold" class="social-link youtube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <a href="https://wa.me/6281234567890?text=Halo%20ELITE%20GOLD%2C%20saya%20ingin%20order%20produk" class="cta-button" style="width:100%; padding:18px; font-size:18px; margin-top:20px; justify-content:center;">
+                        <i class="fab fa-whatsapp" style="font-size:24px;"></i> Order via WhatsApp Sekarang
+                    </a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.608448373167!2d106.82512537480387!3d-6.17538706182373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1707033600000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20ELITE%20GOLD%2C%20saya%20butuh%20bantuan" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">ELITE GOLD & BROWN</div>
+                <p>Brand premium yang menghadirkan kualitas terbaik dengan sentuhan elegan dan eksklusif untuk kebutuhan gaya hidup modern Anda</p>
+                <div class="footer-links">
+                    <a href="#home"><i class="fas fa-home"></i> Beranda</a>
+                    <a href="#about"><i class="fas fa-info-circle"></i> Tentang Kami</a>
+                    <a href="#featured"><i class="fas fa-star"></i> Produk Unggulan</a>
+                    <a href="#catalog"><i class="fas fa-th-large"></i> Katalog</a>
+                    <a href="#consultation"><i class="fas fa-comments"></i> Konsultasi Gratis</a>
+                    <a href="#contact"><i class="fas fa-map-marker-alt"></i> Kontak</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 ELITE GOLD & BROWN. All Rights Reserved. | Premium Brand Since 2015
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Testimonial Slider
+        const testimonialTrack = document.querySelector('.testimonial-track');
+        const testimonialDots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        const totalSlides = 10;
+        let autoSlideInterval;
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            const translateX = -currentSlide * 100;
+            testimonialTrack.style.transform = `translateX(${translateX}%)`;
+            
+            testimonialDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                goToSlide(currentSlide);
+            }, 5000);
+        }
+
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        testimonialSlider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        testimonialSlider.addEventListener('mouseleave', startAutoSlide);
+        
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            });
+        });
+
+        startAutoSlide();
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 27, 17, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.background = 'rgba(44, 27, 17, 0.95)';
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.3)';
+            }
+        });
+
+        // Reveal animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.product-card, .catalog-item, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
